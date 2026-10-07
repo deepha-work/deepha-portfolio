@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepha A. — Web Development Freelancer & UI/UX Designer</title>
+  <meta name="description" content="Portfolio of Deepha A. — Full-cycle Web Development Freelancer & UI/UX Designer specializing in HTML5, CSS3, React.js, Next.js, and Figma Design Systems. Available for global freelance and contract work." />
+  <meta name="keywords" content="Deepha Arunachalam, Web Developer Freelancer, UI/UX Designer, React Developer, Next.js Developer, Frontend Engineer, Figma Design System, Tenkasi Web Developer" />
+  <meta name="author" content="Deepha A" />
+
+  <!-- OpenGraph Meta Tags -->
+  <meta property="og:title" content="Deepha A. — Web Development Freelancer & UI/UX Designer" />
+  <meta property="og:description" content="Bridging human-centric design with high-performance React & Next.js web applications." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/deepha-profile.jpg" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/main.css?v=2.5" />
+  <link rel="stylesheet" href="css/components.css?v=2.5" />
+
+  <!-- Lucide Icons Script -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <!-- Architectural Column Guidelines Overlay -->
+  <div class="grid-lines-overlay" aria-hidden="true">
+    <div class="grid-line-col"></div>
+    <div class="grid-line-col"></div>
+    <div class="grid-line-col"></div>
+    <div class="grid-line-col"></div>
+    <div class="grid-line-col"></div>
+    <div class="grid-line-col"></div>
+  </div>
+
+  <!-- ==========================================================================
+       Header & Navigation (Floating Glass Bento Bar)
+       ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container header-container">
+      <!-- Left: Brand Logo -->
+      <a href="#hero" class="brand-logo" aria-label="Deepha Portfolio Home">
+        <span class="logo-mark">D</span>
+        <span class="logo-text">DEEPHA<span class="logo-dot">.</span>DEV</span>
+      </a>
+
+      <!-- Center: Navigation Tabs -->
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#works" class="nav-link">Works</a>
+        <a href="#calculator" class="nav-link">Cost Estimator</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+      </nav>
+
+      <!-- Right: Navigation Actions -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Toggle Dark/Light Mode" title="Toggle Theme">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </button>
+
+        <button class="btn btn-secondary btn-sm open-resume-modal" title="View Full Resume / CV">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg>
+          <span>View CV</span>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm nav-cta-btn">
+          <span>Let's Talk</span>
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Open Mobile Menu">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-backdrop"></div>
+  <aside class="mobile-nav-drawer" aria-label="Mobile Navigation">
+    <div>
+      <div class="mobile-nav-header">
+        <div class="brand-logo">
+          <span class="logo-mark">D</span>
+          <span class="logo-text">DEEPHA<span class="logo-dot">.</span>DEV</span>
+        </div>
+        <button class="modal-close-btn mobile-drawer-close" aria-label="Close Mobile Menu">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+        </button>
+      </div>
+
+      <nav class="mobile-nav-links">
+        <a href="#hero" class="mobile-nav-link"><span>Home</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#services" class="mobile-nav-link"><span>Services & Pricing</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#works" class="mobile-nav-link"><span>Selected Works</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#calculator" class="mobile-nav-link"><span>Cost Calculator</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#experience" class="mobile-nav-link"><span>Experience & Skills</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#faq" class="mobile-nav-link"><span>FAQ</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        <a href="#contact" class="mobile-nav-link"><span>Contact Me</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+      </nav>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+      <button class="btn btn-secondary open-resume-modal" style="width: 100%;">
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg>
+        <span>View Full CV</span>
+      </button>
+      <a href="#contact" class="btn btn-accent mobile-nav-link" style="width: 100%; justify-content: center;">
+        <span>Book a Consultation</span>
+      </a>
+    </div>
+  </aside>
+
+
+  <!-- ==========================================================================
+       1. Hero Section (Complete Bento Grid Showcase)
+       ========================================================================== -->
+  <section class="hero-section" id="hero">
+    <div class="watermark-text">UI/UX DESIGN & WEB DEV</div>
+    <div class="container">
+      <div class="bento-hero-grid">
+
+        <!-- Card 1: Main Spotlight Bento Card (Col 7) -->
+        <div class="bento-card bento-hero-main">
+          <div class="hero-main-content">
+            <h1 class="hero-clean-title">
+              <span class="hero-greeting">
+                Hi, <span class="hero-sticker-wrap"><img src="assets/deepha-profile.jpg" alt="Deepha" class="hero-sticker-img" /></span> I'm <span class="hero-name-highlight">Deepha!</span>
+              </span>
+            </h1>
+
+            <p class="hero-clean-desc">
+              Frontend Web Developer & UI/UX Designer crafting clean, high performance websites, custom dashboards, and intuitive digital experiences that help businesses grow.
+            </p>
+
+            <div class="hero-cta-buttons">
+              <a href="#works" class="btn btn-primary">
+                <span>Selected Works</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+              </a>
+              <a href="#calculator" class="btn btn-accent">
+                <span>Cost Estimator</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2"/><line x1="8" x2="16" y1="6" y2="6"/><line x1="16" x2="16" y1="14" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/></svg>
+              </a>
+              <button class="btn btn-secondary open-resume-modal">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg>
+                <span>View CV</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-capability-chips">
+            <span class="capability-chip">React</span>
+            <span class="capability-chip">Next.js</span>
+            <span class="capability-chip">HTML</span>
+            <span class="capability-chip">UI/UX</span>
+            <span class="capability-chip">Fast & SEO Ready</span>
+            <span class="capability-chip">Mobile Responsive</span>
+          </div>
+        </div>
+
+        <!-- Card 2: Interactive Code & UI Studio Bento Card (Col 5) -->
+        <div class="bento-card bento-hero-studio">
+          <div class="studio-window-header">
+            <div class="studio-window-controls">
+              <span class="studio-dot red"></span>
+              <span class="studio-dot yellow"></span>
+              <span class="studio-dot green"></span>
+            </div>
+            <div class="studio-window-title">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <span>developer.config.ts</span>
+            </div>
+            <div class="studio-status-chip">
+              <span class="pulse-beacon"></span>
+              <span>Available</span>
+            </div>
+          </div>
+
+          <div class="studio-code-container">
+            <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"Deepha Arunachalam"</span>,
+  <span class="code-property">focus</span>: <span class="code-string">"Frontend & UI/UX"</span>,
+  <span class="code-property">stack</span>: [<span class="code-string">"React"</span>, <span class="code-string">"Next.js"</span>, <span class="code-string">"Figma"</span>],
+  <span class="code-property">craft</span>: <span class="code-string">"Pixel-Perfect & Scalable"</span>
+};</code></pre>
+          </div>
+
+          <div class="studio-footer-row">
+            <div class="profile-location-pill" style="margin-bottom: 0;">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Tenkasi, India • Remote</span>
+            </div>
+
+            <div class="profile-quick-socials">
+              <a href="https://linkedin.com/in/deepha-a-57689725a" target="_blank" rel="noopener noreferrer" class="profile-social-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="mailto:deephaarunachalam@gmail.com" class="profile-social-btn" title="Send Email" aria-label="Email">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+              <a href="https://wa.me/916369387192" target="_blank" rel="noopener noreferrer" class="profile-social-btn" title="Chat on WhatsApp" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Metrics Bento Grid Row (Col 12) -->
+        <div class="bento-hero-metrics">
+          <div class="bento-metric-card">
+            <div class="bento-metric-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/><polyline points="9 13 12 16 16 11"/></svg>
+            </div>
+            <div>
+              <div class="bento-metric-value stat-number" data-target="6" data-suffix="+">6+</div>
+              <div class="bento-metric-label">Production Projects Shipped</div>
+            </div>
+          </div>
+
+          <div class="bento-metric-card">
+            <div class="bento-metric-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            </div>
+            <div>
+              <div class="bento-metric-value stat-number" data-target="97" data-suffix="%">97%</div>
+              <div class="bento-metric-label">Client Satisfaction Rating</div>
+            </div>
+          </div>
+
+          <div class="bento-metric-card">
+            <div class="bento-metric-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+            </div>
+            <div>
+              <div class="bento-metric-value stat-number" data-target="2" data-suffix="+">2+</div>
+              <div class="bento-metric-label">Years Of Experience</div>
+            </div>
+          </div>
+
+          <div class="bento-metric-card">
+            <div class="bento-metric-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+            </div>
+            <div>
+              <div class="bento-metric-value stat-number" data-target="98" data-suffix="%">98%</div>
+              <div class="bento-metric-label">Lighthouse Performance</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5: Interactive Tech Ticker Bento Card (Col 12) -->
+        <div class="bento-hero-ticker">
+          <div class="ticker-wrapper">
+            <div class="ticker-label">
+              <span class="ticker-dot"></span>
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+              <span>Tech Stack</span>
+            </div>
+            <div class="ticker-track-viewport">
+              <div class="ticker-track">
+                <div class="ticker-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> HTML5 & Semantic Web</div>
+                <div class="ticker-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg> Modern CSS3 Styling</div>
+                <div class="ticker-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="10" ry="4.5"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg> React.js Component Architecture</div>
+                <div class="ticker-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> Next.js SSR/SSG</div>
+                <div class="ticker-item">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>
+                  Figma Design Systems
+                </div>
+                <div class="ticker-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg> TypeScript & JavaScript</div>
+                <!-- Loop duplicates -->
+                <div class="ticker-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg> HTML5 & Semantic Web</div>
+                <div class="ticker-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg> Modern CSS3 Styling</div>
+                <div class="ticker-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="12" rx="10" ry="4.5"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(120 12 12)"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg> React.js Component Architecture</div>
+                <div class="ticker-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg> Next.js SSR/SSG</div>
+                <div class="ticker-item">
+                  <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>
+                  Figma Design Systems
+                </div>
+                <div class="ticker-item"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg> TypeScript & JavaScript</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       2. Services & Capabilities Bento Section
+       ========================================================================== -->
+  <section id="services">
+    <div class="watermark-text">EXPERTISE</div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="layers"></i>
+          <span>What I Do Best</span>
+        </div>
+        <h2 class="section-title">Freelance Web Engineering & UI/UX Solutions</h2>
+        <p class="section-subtitle">
+          From high-converting landing pages and business websites to full admin dashboards, I deliver clean, mobile-friendly, and modern web solutions.
+        </p>
+      </div>
+
+      <!-- Dynamic Services Bento Grid -->
+      <div class="bento-services-grid" id="services-grid-container">
+        <!-- Rendered by main.js -->
+      </div>
+
+      <!-- Pricing Packages Bento -->
+      <div style="margin-top: 80px;">
+        <div class="section-header" style="margin-bottom: 32px;">
+          <div class="section-tag">
+            <i data-lucide="tag"></i>
+            <span>Transparent Rates</span>
+          </div>
+          <h3 style="font-size: 2.2rem;">Freelance Service Packages</h3>
+          <p class="section-subtitle">Choose a simple fixed package below or use the interactive calculator to estimate your exact project scope.</p>
+        </div>
+
+        <div class="bento-pricing-grid" id="pricing-grid-container">
+          <!-- Rendered by main.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       3. Selected Works / Case Studies Bento Section
+       ========================================================================== -->
+  <section id="works" style="background: var(--bg-secondary);">
+    <div class="watermark-text">PORTFOLIO</div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="folder-git-2"></i>
+          <span>Case Studies</span>
+        </div>
+        <h2 class="section-title">Selected Works & Production Projects</h2>
+        <p class="section-subtitle">
+          Explore real-world websites, interactive dashboards, and client projects built with clean design and high performance.
+        </p>
+      </div>
+
+      <!-- Project Category Filters -->
+      <div class="projects-filter-bar">
+        <button class="filter-tab active" data-filter="all">All Projects</button>
+        <button class="filter-tab" data-filter="react">React & Next.js</button>
+        <button class="filter-tab" data-filter="uiux">UI/UX & Figma</button>
+        <button class="filter-tab" data-filter="dashboard">Dashboards & Portals</button>
+      </div>
+
+      <!-- Dynamic Projects Bento Grid -->
+      <div class="bento-projects-grid" id="projects-grid-container">
+        <!-- Rendered by main.js -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       4. Interactive Freelance Project Cost Estimator Bento
+       ========================================================================== -->
+  <section id="calculator">
+    <div class="watermark-text">ESTIMATOR</div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="calculator"></i>
+          <span>Instant Quote Generator</span>
+        </div>
+        <h2 class="section-title">Interactive Project Cost Estimator</h2>
+        <p class="section-subtitle">
+          Select your desired project parameters below to get an upfront estimate of investment and delivery timeline.
+        </p>
+      </div>
+
+      <div class="bento-estimator-grid">
+        <!-- Left Bento Card: Configuration Options -->
+        <div class="bento-estimator-config">
+          <!-- 1. Project Type Selector -->
+          <div class="calc-section-label">
+            <i data-lucide="layout" style="color: var(--accent-primary); width: 17px; height: 17px;"></i>
+            <span>1. Select Project Type</span>
+          </div>
+
+          <div class="project-type-options">
+            <div class="calc-option-btn estimator-type-btn active" data-name="Single Landing Page" data-price="3500" data-days="3">
+              <div class="calc-option-title">Single Landing Page</div>
+              <div class="calc-option-sub">₹3,500 (Flat) • Full multi-section 1-page site (About, Gallery, Reviews & Booking)</div>
+            </div>
+
+            <div class="calc-option-btn estimator-type-btn" data-name="Multi-Page Website (Static)" data-price="2000" data-days="3">
+              <div class="calc-option-title">Multi-Page Website (Static)</div>
+              <div class="calc-option-sub">₹2,000 / page • Clean company & service pages</div>
+            </div>
+
+            <div class="calc-option-btn estimator-type-btn" data-name="Admin Dashboard & Portal" data-price="3000" data-days="4">
+              <div class="calc-option-title">Admin Dashboard & Portal</div>
+              <div class="calc-option-sub">₹3,000 / page • Business panels, tables & charts</div>
+            </div>
+
+            <div class="calc-option-btn estimator-type-btn" data-name="Web App with Database" data-price="4000" data-days="5">
+              <div class="calc-option-title">Web App with Database</div>
+              <div class="calc-option-sub">₹4,000 / page • Dynamic web app & user logins</div>
+            </div>
+          </div>
+
+          <!-- 2. Scope & Pages Range Selector -->
+          <div class="scope-selection-wrapper muted" id="scope-selection-wrapper">
+            <div class="calc-section-label">
+              <i data-lucide="layers" style="color: var(--accent-primary); width: 17px; height: 17px;"></i>
+              <span>2. Select Scope / Number of Pages</span>
+              <span class="scope-muted-badge">Fixed to 1 page</span>
+            </div>
+
+            <div class="scope-options-grid" id="scope-options-container">
+              <div class="calc-option-btn estimator-scope-btn" data-name="3 – 5 Pages Scope" data-multiplier="4" data-days-add="2">
+                <div class="calc-option-title">3 – 5 Pages Scope</div>
+                <div class="calc-option-sub">Standard business website</div>
+              </div>
+
+              <div class="calc-option-btn estimator-scope-btn" data-name="6 – 10 Pages Scope" data-multiplier="8" data-days-add="4">
+                <div class="calc-option-title">6 – 10 Pages Scope</div>
+                <div class="calc-option-sub">Growing company & services</div>
+              </div>
+
+              <div class="calc-option-btn estimator-scope-btn" data-name="10+ Pages Scope" data-multiplier="12" data-days-add="7">
+                <div class="calc-option-title">10+ Pages Scope</div>
+                <div class="calc-option-sub">Large multi-section platform</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Optional Motion & Animation Add-on -->
+          <div class="calc-section-label">
+            <i data-lucide="sparkles" style="color: var(--accent-primary); width: 17px; height: 17px;"></i>
+            <span>3. Animation & Visual Motion Add-on</span>
+          </div>
+
+          <div class="addons-checklist" style="grid-template-columns: 1fr;">
+            <label class="addon-checkbox-label" style="align-items: flex-start; padding: 14px 16px;">
+              <input type="checkbox" class="estimator-addon-check" data-name="Complex & Advanced Animations" data-price="1000" data-days="1" style="margin-top: 3px;" />
+              <div style="display: flex; flex-direction: column; gap: 4px;">
+                <span style="font-weight: 600; color: var(--text-primary); font-size: 0.95rem;">
+                  Complex & Advanced Web Animations (+₹1,000)
+                </span>
+                <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
+                  Adds rich 3D card tilts, scroll-driven visual effects, particle interactions, and kinetic typography. 
+                  <span style="color: var(--accent-primary); font-weight: 500;">(Standard clean transitions and hover effects are always included free in base pricing).</span>
+                </p>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- Right Bento Card: Dynamic Receipt Card -->
+        <div class="bento-estimator-receipt">
+          <div class="receipt-header">
+            <h3 class="receipt-title">Investment Summary</h3>
+            <p style="font-size: 0.88rem; color: var(--text-secondary);">Transparent pricing with zero hidden fees.</p>
+          </div>
+
+          <div class="receipt-total-box">
+            <div class="receipt-total-amount" id="estimator-price-val">₹3,500</div>
+            <span class="receipt-total-sub">Estimated Amount</span>
+          </div>
+
+          <div class="receipt-breakdown-list">
+            <div class="receipt-breakdown-row">
+              <span>Project Type:</span>
+              <strong id="spec-type-val">Single Landing Page</strong>
+            </div>
+            <div class="receipt-breakdown-row">
+              <span>Scope:</span>
+              <strong id="spec-scope-val">1 Page (Landing Page)</strong>
+            </div>
+            <div class="receipt-breakdown-row">
+              <span>Add-ons:</span>
+              <strong id="spec-addons-val">Standard Inclusions</strong>
+            </div>
+            <div class="receipt-breakdown-row" style="padding-top: 8px; border-top: 1px dashed var(--border-subtle);">
+              <span id="estimator-timeline-val" style="color: var(--accent-primary); font-weight: 600;">
+                <i data-lucide="calendar"></i> Estimated Turnaround: 3 – 5 Business Days
+              </span>
+            </div>
+          </div>
+
+          <button class="btn btn-accent" id="estimator-export-btn" style="width: 100%;">
+            <span>Book This Project Scope</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       5. Experience, Education & Skills Bento Section
+       ========================================================================== -->
+  <section id="experience" style="background: var(--bg-secondary);">
+    <div class="watermark-text">ROADMAP</div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="briefcase"></i>
+          <span>Track Record</span>
+        </div>
+        <h2 class="section-title">Career Experience & Academic Credentials</h2>
+        <p class="section-subtitle">
+          Proven industry experience delivering UI/UX design and frontend implementations across international remote teams.
+        </p>
+      </div>
+
+      <div class="bento-career-grid">
+        <!-- Card 1: Experience Timeline Bento Card (Col 7) -->
+        <div class="bento-timeline-card">
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 18px; display: flex; align-items: center; gap: 8px;">
+            <i data-lucide="briefcase" style="color: var(--accent-primary);"></i> Work Experience
+          </h3>
+          <div id="timeline-container">
+            <!-- Rendered by main.js -->
+          </div>
+        </div>
+
+        <!-- Card 2: Education & Certifications Bento Card (Col 5) -->
+        <div class="bento-education-card">
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="graduation-cap" style="color: var(--accent-primary);"></i> Academic Track
+            </h3>
+            <div id="education-cards-container">
+              <!-- Rendered by main.js -->
+            </div>
+          </div>
+
+          <div>
+            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+              <i data-lucide="award" style="color: var(--accent-primary);"></i> Certifications
+            </h3>
+            <div id="certifications-container">
+              <!-- Rendered by main.js -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Technical Skills Mastery Bento Card (Col 12) -->
+        <div class="bento-skills-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
+            <div>
+              <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 4px;">Technical Proficiency</h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary);">Demonstrated mastery across frontend engineering, UI design, and tooling.</p>
+            </div>
+
+            <div class="skills-category-tabs" style="margin-bottom: 0;">
+              <button class="skill-tab-btn active" data-skill-cat="all">All Skills</button>
+              <button class="skill-tab-btn" data-skill-cat="frontend">Frontend & React</button>
+              <button class="skill-tab-btn" data-skill-cat="design">UI/UX & Figma</button>
+              <button class="skill-tab-btn" data-skill-cat="tools">Dev Tools</button>
+            </div>
+          </div>
+
+          <div class="skills-progress-list" id="skills-progress-container">
+            <!-- Rendered by main.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       6. Testimonials & Social Proof Bento Section
+       ========================================================================== -->
+  <section id="testimonials">
+    <div class="watermark-text">REVIEWS</div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="message-square"></i>
+          <span>Client Endorsements</span>
+        </div>
+        <h2 class="section-title">What Founders & Engineering Leaders Say</h2>
+        <p class="section-subtitle">
+          Real feedback from founders, product leads, and engineering managers who collaborated with Deepha.
+        </p>
+      </div>
+
+      <div class="bento-testimonials-grid" id="testimonials-grid-container">
+        <!-- Rendered by main.js -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       7. Frequently Asked Questions Bento Section
+       ========================================================================== -->
+  <section id="faq" style="background: var(--bg-secondary);">
+    <div class="watermark-text">FAQ</div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <i data-lucide="help-circle"></i>
+          <span>Common Inquiries</span>
+        </div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Clear answers about freelance workflows, technology stacks, pricing, and project turnaround times.
+        </p>
+      </div>
+
+      <div class="bento-faq-grid" id="faq-accordion-container" style="max-width: 900px; margin: 0 auto;">
+        <!-- Rendered by main.js -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       8. Contact & Consultation Bento Section
+       ========================================================================== -->
+  <section id="contact">
+    <div class="watermark-text">LET'S TALK</div>
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span>Let's Connect</span>
+        </div>
+        <h2 class="section-title">Ready to Build Your Next Web Project?</h2>
+        <p class="section-subtitle">
+          Have an upcoming project, a Figma design ready for React coding, or need a full web overhaul? Let’s make it happen.
+        </p>
+      </div>
+
+      <div class="bento-contact-grid">
+        <!-- Left Bento Card: Direct Contact Channels -->
+        <div class="bento-contact-info">
+          <div>
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">Get In Touch Directly</h3>
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 24px;">
+              Feel free to reach out via email, phone, or book a consultation below.
+            </p>
+
+            <div class="contact-channel-item">
+              <div class="contact-channel-left">
+                <div class="contact-channel-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div class="contact-channel-text">
+                  <h6>Email Address</h6>
+                  <a href="mailto:deephaarunachalam@gmail.com">deephaarunachalam@gmail.com</a>
+                </div>
+              </div>
+              <button class="copy-btn copy-email-trigger" title="Copy Email">Copy</button>
+            </div>
+
+            <div class="contact-channel-item">
+              <div class="contact-channel-left">
+                <div class="contact-channel-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div class="contact-channel-text">
+                  <h6>Direct Line / WhatsApp</h6>
+                  <a href="https://wa.me/916369387192" target="_blank" rel="noopener noreferrer">+91 6369387192</a>
+                </div>
+              </div>
+              <button class="copy-btn copy-phone-trigger" title="Copy Phone">Copy</button>
+            </div>
+
+            <div class="contact-channel-item">
+              <div class="contact-channel-left">
+                <div class="contact-channel-icon">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div class="contact-channel-text">
+                  <h6>Primary Location</h6>
+                  <span>Tenkasi, Tamil Nadu, India</span>
+                </div>
+              </div>
+              <span class="bento-pill-tag" style="font-size: 0.72rem;">Remote</span>
+            </div>
+          </div>
+
+          <div style="padding-top: 20px; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+            <span style="font-size: 0.86rem; color: var(--text-secondary);">Connect on Social:</span>
+            <div style="display: flex; gap: 8px;">
+              <a href="https://linkedin.com/in/deepha-a-57689725a" target="_blank" rel="noopener noreferrer" class="profile-social-btn" title="LinkedIn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="mailto:deephaarunachalam@gmail.com" class="profile-social-btn" title="Email" aria-label="Email">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Bento Card: Consultation Form -->
+        <div class="bento-contact-form-card">
+          <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">Send a Message</h3>
+          <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 24px;">
+            Fill out the details below to start a direct WhatsApp consultation with Deepha.
+          </p>
+
+          <form id="portfolio-contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="contact-name">Your Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Alex Morgan" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="contact-email">Email Address</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="e.g. alex@company.com" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-service">Service Required</label>
+              <select id="contact-service" class="form-input">
+                <option value="Custom Website Development">Custom Website Development (Landing Page / Business Site)</option>
+                <option value="Figma Design to Live Website">Figma Design to Live Website</option>
+                <option value="UI/UX & Clickable Prototypes">UI/UX Design & Clickable Prototype</option>
+                <option value="Admin Dashboards & Portals">Admin Dashboard & Business Portal</option>
+                <option value="Website Redesign & Speed Boost">Website Redesign & Speed Boost</option>
+                <option value="General Consultation">General Consultation / Other Inquiry</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-budget">Estimated Budget Range</label>
+              <select id="contact-budget" class="form-input">
+                <option value="₹3,500 - ₹10,000">₹3,500 – ₹10,000 (Single Page / Small Website)</option>
+                <option value="₹10,000 - ₹25,000" selected>₹10,000 – ₹25,000 (Multi-Page / Dashboard)</option>
+                <option value="₹25,000+">₹25,000+ (Full Web App / Large Project)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="contact-message">Project Details / Goals</label>
+              <textarea id="contact-message" class="form-textarea" placeholder="Describe your project, timeline, target audience, or specific requirements..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Send Inquiry via WhatsApp</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================================================
+       9. Footer Bento Section
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="bento-footer-card">
+        <div class="footer-top-grid">
+          <div class="footer-brand">
+            <div class="brand-logo" style="margin-bottom: 12px;">
+              <span class="logo-mark">D</span>
+              <span class="logo-text">DEEPHA<span class="logo-dot">.</span>DEV</span>
+            </div>
+            <p>
+              Bridging human-centered UI/UX design with high-performance React and Next.js frontend web engineering.
+            </p>
+            <div style="display: flex; gap: 10px; margin-top: 18px;">
+              <a href="https://linkedin.com/in/deepha-a-57689725a" target="_blank" rel="noopener noreferrer" class="profile-social-btn" title="LinkedIn" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="mailto:deephaarunachalam@gmail.com" class="profile-social-btn" title="Email" aria-label="Email">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+              <a href="https://wa.me/916369387192" target="_blank" rel="noopener noreferrer" class="profile-social-btn" title="Chat on WhatsApp" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h5>Navigation</h5>
+            <div class="footer-links">
+              <a href="#hero" class="footer-link">Home</a>
+              <a href="#services" class="footer-link">Freelance Services</a>
+              <a href="#works" class="footer-link">Selected Works</a>
+              <a href="#calculator" class="footer-link">Cost Estimator</a>
+              <a href="#experience" class="footer-link">Career Track</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h5>Core Services</h5>
+            <div class="footer-links">
+              <a href="#services" class="footer-link">Custom Web Development</a>
+              <a href="#services" class="footer-link">Dashboards & Web Applications</a>
+              <a href="#services" class="footer-link">Website Speed Optimization</a>
+              <a href="#services" class="footer-link">UI/UX & Product Design</a>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h5>Direct Contact</h5>
+            <div class="footer-links">
+              <span class="footer-link" style="color: var(--text-primary); font-weight: 600;">Tenkasi, Tamil Nadu, India</span>
+              <a href="mailto:deephaarunachalam@gmail.com" class="footer-link">deephaarunachalam@gmail.com</a>
+              <a href="https://wa.me/916369387192" target="_blank" rel="noopener noreferrer" class="footer-link">+91 6369387192 (WhatsApp)</a>
+              <button class="open-resume-modal footer-link" style="text-align: left; background: none; border: none; cursor: pointer; color: var(--accent-primary); font-weight: 600;">
+                Download CV (Curriculum Vitae)
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div>
+            © 2026 <strong>Deepha Arunachalam</strong>. All Rights Reserved. 
+          </div>
+          <a href="#hero" class="back-to-top-btn">
+            <span>Back to Top</span>
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 15-6-6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ==========================================================================
+       10. Interactive Modals
+       ========================================================================== -->
+
+  <!-- 1. Case Study Deep Dive Modal -->
+  <div class="modal-backdrop" id="case-study-modal" aria-hidden="true" role="dialog">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Case Study">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+      <div id="modal-dynamic-content">
+        <!-- Rendered dynamically by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Live Resume / CV Modal -->
+  <div class="modal-backdrop" id="resume-modal" aria-hidden="true" role="dialog">
+    <div class="modal-container" style="max-width: 860px;">
+      <button class="modal-close-btn" id="resume-modal-close" aria-label="Close CV Modal">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+      </button>
+
+      <div class="resume-modal-body">
+        <div class="resume-header-row">
+          <div>
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--text-primary); margin-bottom: 4px;">Deepha Arunachalam</h2>
+            <p style="font-size: 1.05rem; color: var(--accent-primary); font-weight: 600;">Web Development Freelancer & UI/UX Designer</p>
+            <div style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 6px;">
+              Tenkasi, Tamil Nadu, India • deephaarunachalam@gmail.com • +91 6369387192
+            </div>
+          </div>
+
+          <button class="btn btn-primary btn-sm" id="print-resume-btn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect width="12" height="8" x="6" y="14"/></svg>
+            <span>Print CV</span>
+          </button>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <h4 class="resume-section-title">Professional Summary</h4>
+          <p style="font-size: 0.94rem; color: var(--text-secondary); line-height: 1.65;">
+            Computer Science Engineering graduate and passionate frontend developer & UI/UX designer. Proven track record delivering 15+ production-grade web interfaces for commercial clients and international teams. Proficient in HTML5, CSS3, React, Next.js, and Figma Design Systems.
+          </p>
+        </div>
+
+        <div style="margin-bottom: 24px;">
+          <h4 class="resume-section-title">Experience Track</h4>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div>
+              <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary);">
+                <span>Maesterominds — UI/UX & Frontend Developer</span>
+                <span style="color: var(--accent-primary);">Sep 2025 – Present</span>
+              </div>
+              <div style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 2px;">
+                Engineered frontend modules for Batter, EduNova, Vevetrack & MentorConnect in Next.js & Figma.
+              </div>
+            </div>
+
+            <div>
+              <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary);">
+                <span>Arshan (Berlin, Germany) — UI/UX Designer & Web Consultant</span>
+                <span style="color: var(--accent-primary);">Aug 2025 – Sep 2025</span>
+              </div>
+              <div style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 2px;">
+                Designed comprehensive admin workflows, seat-booking interfaces, and interactive prototypes.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="resume-section-title">Education & Credentials</h4>
+          <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.92rem; color: var(--text-primary);">
+            <span>B.E. Computer Science & Engineering (Francis Xavier Engineering College)</span>
+            <span style="color: var(--accent-primary);">CGPA: 8.58 / 10</span>
+          </div>
+          <div style="font-size: 0.84rem; color: var(--text-muted); margin-top: 4px;">
+            FutureLearn (Accenture) User Experience • NPTEL / IIT Human-Computer Interaction
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js?v=2.4"></script>
+  <script src="js/main.js?v=2.4"></script>
+</body>
+</html>
