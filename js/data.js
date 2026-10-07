@@ -380,7 +380,6 @@ const portfolioData = {
       pricePeriod: "flat rate",
       features: [
         "Full-Length Single Page with Multiple Custom Sections",
-        "Includes Hero, About/Why Us, Gallery, Reviews & Booking/Contact",
         "100% Mobile, Tablet & Desktop Responsive",
         "Custom Visual Mockup in Figma Included",
         "Fast Page Loading & Google Search (SEO) Setup",
@@ -397,7 +396,6 @@ const portfolioData = {
       pricePeriod: "page",
       features: [
         "₹2,000 Per Page (Pay only for pages you need)",
-        "Pixel-Perfect Design Converted to Clean Code",
         "Works Flawlessly on All Phones & Laptops",
         "Inquiry Forms & Google Maps Integration",
         "Speed & Search Engine (SEO) Optimization",
@@ -415,7 +413,6 @@ const portfolioData = {
       features: [
         "Admin Dashboards at ₹3,000 / page",
         "Full-Stack Web Apps with Database at ₹4,000 / page",
-        "User Accounts, Secure Logins & Permissions",
         "Interactive Charts, Data Tables & Export Tools",
         "Custom API & External Service Integration",
         "Priority 30-Day Support & Free Minor Revisions"
