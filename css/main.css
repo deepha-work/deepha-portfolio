@@ -76,7 +76,7 @@
   /* Bento Grid Design System Tokens */
   --radius-bento: 24px;
   --radius-bento-sm: 16px;
-  --bento-gap: 20px;
+  --bento-gap: 26px;
   --bento-border: var(--border-subtle);
   --bento-border-hover: var(--border-medium);
   --bento-bg: var(--bg-card);
@@ -148,6 +148,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+  overflow-x: clip;
+  max-width: 100%;
 }
 
 body {
@@ -157,7 +159,8 @@ body {
   line-height: 1.65;
   min-height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  overflow-x: visible;
+  max-width: 100%;
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
@@ -481,7 +484,7 @@ img {
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-display);
-  font-size: clamp(3.8rem, 11vw, 8.5rem);
+  font-size: clamp(2.4rem, 11vw, 8.5rem);
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -491,6 +494,7 @@ img {
   user-select: none;
   white-space: nowrap;
   z-index: 0;
+  max-width: 100%;
 }
 
 /* Accent Typography */
@@ -502,6 +506,7 @@ img {
 .accent-gradient-text {
   background: var(--accent-gradient-text);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
@@ -659,8 +664,12 @@ img {
 }
 
 .btn-sm {
-  padding: 8px 18px;
+  height: 40px;
+  min-height: 40px;
+  padding: 0 18px;
   font-size: 0.84rem;
+  line-height: 1;
+  box-sizing: border-box;
 }
 
 .btn-lg {
@@ -716,6 +725,7 @@ img {
 section {
   padding: 84px 0;
   position: relative;
+  overflow-x: clip;
 }
 
 /* ==========================================================================

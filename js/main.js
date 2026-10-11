@@ -207,7 +207,7 @@ function init3DCardTilt() {
     });
 
     card.addEventListener("mouseleave", () => {
-      card.style.transform = "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0)";
+      card.style.transform = "";
     });
   });
 }
@@ -226,17 +226,19 @@ function renderServices() {
     <div class="bento-service-card ${idx < 2 ? "featured" : ""}" data-service-id="${s.id}">
       <div class="service-card-top">
         <div class="service-card-header">
-          <div class="bento-icon-badge">
-            ${
-              s.icon === "figma"
-                ? `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>`
-                : `<i data-lucide="${s.icon || "code"}"></i>`
-            }
+          <div class="service-card-badge-wrap">
+            <div class="bento-icon-badge">
+              ${
+                s.icon === "figma"
+                  ? `<svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>`
+                  : `<i data-lucide="${s.icon || "code"}"></i>`
+              }
+            </div>
+            <span class="bento-pill-tag accent">${s.category}</span>
           </div>
           <span class="service-card-number">${s.number}</span>
         </div>
 
-        <span class="bento-pill-tag accent" style="margin-bottom: 12px;">${s.category}</span>
         <h3 class="service-card-title">${s.title}</h3>
         <p class="service-card-desc">${s.desc}</p>
 
@@ -245,7 +247,7 @@ function renderServices() {
             .map(
               (d) => `
             <div class="service-deliverable-item">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="var(--accent-primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
+              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="m9 12 2 2 4-4"/></svg>
               <span>${d}</span>
             </div>
           `
@@ -285,14 +287,11 @@ function renderServices() {
 /* ==========================================================================
    6. Render Projects & Filter Logic
    ========================================================================== */
-function renderProjects(filter = "all") {
+function renderProjects() {
   const container = document.getElementById("projects-grid-container");
   if (!container || !window.portfolioData) return;
 
-  const projects = window.portfolioData.projects.filter((p) => {
-    if (filter === "all") return true;
-    return p.category === filter;
-  });
+  const projects = window.portfolioData.projects;
 
   container.innerHTML = projects
     .map(
@@ -307,10 +306,6 @@ function renderProjects(filter = "all") {
         <div>
           <h3 class="project-card-title">${p.title}</h3>
           <p class="project-card-tagline">${p.tagline}</p>
-
-          <div class="project-metrics-strip">
-            ${p.metrics.map((m) => `<span class="project-metric-pill">${m.label}: <strong>${m.value}</strong></span>`).join("")}
-          </div>
 
           <div class="project-tech-tags">
             ${p.technologies.map((t) => `<span class="project-tech-pill">${t}</span>`).join("")}
@@ -347,6 +342,7 @@ function renderProjects(filter = "all") {
 
 function initProjectFilters() {
   const filterTabs = document.querySelectorAll(".filter-tab");
+  if (!filterTabs.length) return;
   filterTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
       filterTabs.forEach((t) => t.classList.remove("active"));
@@ -402,47 +398,47 @@ function openProjectModal(projectId) {
 
     <div class="modal-content-body">
       <span class="bento-pill-tag accent" style="margin-bottom: 12px;">${project.categoryLabel} • Case Study</span>
-      <h2 style="font-size: 2rem; margin-bottom: 8px;">${project.title}</h2>
-      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 24px;">${project.tagline}</p>
+      <h2 class="modal-project-title">${project.title}</h2>
+      <p class="modal-project-tagline">${project.tagline}</p>
 
       <div class="modal-metrics-grid">
         ${project.metrics
           .map(
             (m) => `
           <div class="modal-metric-card">
-            <div style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--accent-primary);">${m.value}</div>
-            <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">${m.label}</div>
+            <div class="modal-metric-val">${m.value}</div>
+            <div class="modal-metric-lbl">${m.label}</div>
           </div>
         `
           )
           .join("")}
       </div>
 
-      <div style="margin: 28px 0;">
-        <h4 style="font-size: 1.15rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+      <div class="modal-section-block">
+        <h4 class="modal-section-heading">
           <i data-lucide="info" style="color: var(--accent-primary);"></i> Project Overview
         </h4>
-        <p style="font-size: 0.98rem; line-height: 1.7; color: var(--text-secondary);">${project.overview}</p>
+        <p class="modal-section-desc">${project.overview}</p>
       </div>
 
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 28px;">
-        <div style="background: var(--bg-secondary); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-          <h5 style="font-size: 1rem; margin-bottom: 8px; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+      <div class="modal-challenge-solution-grid">
+        <div class="modal-info-box">
+          <h5>
             <i data-lucide="alert-circle" style="color: #EF4444; width: 18px; height: 18px;"></i> The Challenge
           </h5>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">${project.challenge}</p>
+          <p>${project.challenge}</p>
         </div>
 
-        <div style="background: var(--bg-secondary); padding: 20px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
-          <h5 style="font-size: 1rem; margin-bottom: 8px; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
+        <div class="modal-info-box">
+          <h5>
             <i data-lucide="check-circle" style="color: #10B981; width: 18px; height: 18px;"></i> The Solution
           </h5>
-          <p style="font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6;">${project.solution}</p>
+          <p>${project.solution}</p>
         </div>
       </div>
 
-      <div style="margin-bottom: 28px;">
-        <h4 style="font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+      <div class="modal-section-block">
+        <h4 class="modal-section-heading">
           <i data-lucide="sparkles" style="color: var(--accent-primary);"></i> Key Features & Deliverables
         </h4>
         <div class="modal-feature-list">
@@ -459,24 +455,25 @@ function openProjectModal(projectId) {
         </div>
       </div>
 
-      <div style="margin-bottom: 32px;">
-        <h4 style="font-size: 1.15rem; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+      <div class="modal-section-block">
+        <h4 class="modal-section-heading">
           <i data-lucide="code" style="color: var(--accent-primary);"></i> Technologies & Tools
         </h4>
-        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+        <div class="modal-tech-pills">
           ${project.technologies.map((t) => `<span class="bento-pill-tag">${t}</span>`).join("")}
         </div>
       </div>
 
-      <div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 24px; border-top: 1px solid var(--border-subtle);">
+      <div class="modal-actions-footer">
         <a href="${project.liveUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-accent magnetic-btn">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
           <span>Launch Live Preview</span>
         </a>
+        ${project.figmaUrl ? `
         <a href="${project.figmaUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-secondary magnetic-btn">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>
           <span>View Figma Specs</span>
-        </a>
+        </a>` : ""}
         <button class="btn btn-outline request-similar-cta magnetic-btn" data-project-title="${project.title}">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           <span>Request Similar Solution</span>
@@ -519,7 +516,7 @@ function initCostEstimator() {
   const specScopeDisplay = document.getElementById("spec-scope-val");
   const specAddonsDisplay = document.getElementById("spec-addons-val");
 
-  let selectedType = { name: "Single Landing Page", basePrice: 3500, baseDays: 3 };
+  let selectedType = { name: "Single Landing Page", basePrice: 4000, baseDays: 3 };
   let selectedScope = { name: "1 Page (Landing Page)", multiplier: 1, daysAdd: 0 };
   let selectedAddons = [];
   let lastScopeChoice = { name: "3 – 5 Pages Scope", multiplier: 4, daysAdd: 2 };
@@ -595,7 +592,7 @@ function initCostEstimator() {
     });
   });
 
-  let lastEstimatedPrice = 3500;
+  let lastEstimatedPrice = 4000;
 
   function animatePriceCount(from, to) {
     if (!priceDisplay) return;
@@ -657,7 +654,7 @@ function initCostEstimator() {
 
       if (budgetSelect) {
         let price = parseInt(priceDisplay.textContent.replace(/[^0-9]/g, ""), 10);
-        if (price <= 8000) budgetSelect.value = "₹3,500 - ₹10,000";
+        if (price <= 8000) budgetSelect.value = "₹4,000 - ₹10,000";
         else if (price <= 25000) budgetSelect.value = "₹10,000 - ₹25,000";
         else budgetSelect.value = "₹25,000+";
       }
@@ -683,51 +680,44 @@ function renderExperience() {
   if (!container || !window.portfolioData) return;
 
   const expData = window.portfolioData.experience;
-  let activeIndex = 0;
 
-  function renderExpTabs() {
-    container.innerHTML = `
-      <div class="timeline-tabs">
-        ${expData.map((e, idx) => `
-          <button class="timeline-tab-btn ${idx === activeIndex ? "active" : ""}" data-exp-idx="${idx}">
-            ${e.company}
-          </button>
-        `).join("")}
-      </div>
-
-      <div class="timeline-detail-box">
-        <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: 6px;">
-          <h4 class="timeline-role-title">${expData[activeIndex].role}</h4>
-          <span class="bento-pill-tag accent">${expData[activeIndex].period}</span>
-        </div>
-        <div class="timeline-company-row">
-          <strong>${expData[activeIndex].company}</strong> • <span>${expData[activeIndex].location}</span> • <span style="color: var(--accent-primary); font-weight: 600;">${expData[activeIndex].type}</span>
-        </div>
-        <p style="font-size: 0.94rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6;">${expData[activeIndex].description}</p>
-        
-        <div class="timeline-achievements-list">
-          ${expData[activeIndex].achievements.map(ach => `
-            <div class="timeline-achievement-item">
-              <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="var(--accent-primary)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-              <span>${ach}</span>
+  container.innerHTML = `
+    <div class="vertical-timeline">
+      ${expData.map((item, idx) => {
+        const isCurrent = item.period.toLowerCase().includes("present");
+        const isLast = idx === expData.length - 1;
+        return `
+          <div class="timeline-v-item ${isCurrent ? "is-current" : ""}">
+            <div class="timeline-v-marker">
+              <div class="timeline-v-dot"></div>
             </div>
-          `).join("")}
-        </div>
-      </div>
-    `;
+            <div class="timeline-v-card">
+              <div class="timeline-v-header">
+                <div class="timeline-v-title-group">
+                  <h4 class="timeline-v-company">${item.company}</h4>
+                  <div class="timeline-v-role">${item.role}</div>
+                </div>
+                <div class="timeline-v-period-tag ${isCurrent ? "current" : ""}">
+                  ${isCurrent ? '<span class="timeline-v-pulse"></span>' : ""}
+                  <span>${item.period}</span>
+                </div>
+              </div>
+              <div class="timeline-v-meta">
+                <span class="timeline-v-meta-item">
+                  <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                  <span>${item.location}</span>
+                </span>
+                <span class="timeline-v-meta-pill">${item.type}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("")}
+    </div>
+  `;
 
-    container.querySelectorAll(".timeline-tab-btn").forEach(btn => {
-      btn.addEventListener("click", () => {
-        activeIndex = parseInt(btn.getAttribute("data-exp-idx"), 10);
-        renderExpTabs();
-      });
-    });
-
-    if (window.lucide) window.lucide.createIcons();
-    init3DCardTilt();
-  }
-
-  renderExpTabs();
+  if (window.lucide) window.lucide.createIcons();
+  init3DCardTilt();
 }
 
 function renderEducation() {
@@ -742,8 +732,8 @@ function renderEducation() {
       <div class="edu-item-box">
         <div class="edu-degree-title">${edu.degree}</div>
         <div class="edu-institution">${edu.institution} • ${edu.location}</div>
-        <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 8px;">
-          <span style="font-size: 0.82rem; color: var(--text-muted);">${edu.period}</span>
+        <div class="edu-meta-row">
+          <span class="edu-period-text">${edu.period}</span>
           <span class="edu-score-chip">${edu.score}</span>
         </div>
       </div>
@@ -822,12 +812,14 @@ function renderPricing() {
       ${pkg.popular ? `<span class="pricing-badge-popular">Most Popular Choice</span>` : ""}
       <div>
         <h3 class="pricing-tier-name">${pkg.name}</h3>
-        <p class="pricing-tier-tagline">${pkg.tagline}</p>
 
         <div class="pricing-price-box">
+          ${pkg.pricePrefix ? `<span class="pricing-price-prefix">${pkg.pricePrefix}</span>` : ""}
           <span class="pricing-price-amount">${pkg.price}</span>
           <span class="pricing-price-period">/${pkg.pricePeriod}</span>
         </div>
+
+        ${pkg.desc ? `<p class="pricing-tier-desc">${pkg.desc}</p>` : ""}
 
         <div class="pricing-features-list">
           ${pkg.features

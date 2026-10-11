@@ -2,7 +2,13 @@
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Deepha.dev" />
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#09090B" media="(prefers-color-scheme: dark)" />
+  <meta name="format-detection" content="telephone=no" />
   <title>Deepha A. — Web Development Freelancer & UI/UX Designer</title>
   <meta name="description" content="Portfolio of Deepha A. — Full-cycle Web Development Freelancer & UI/UX Designer specializing in HTML5, CSS3, React.js, Next.js, and Figma Design Systems. Available for global freelance and contract work." />
   <meta name="keywords" content="Deepha Arunachalam, Web Developer Freelancer, UI/UX Designer, React Developer, Next.js Developer, Frontend Engineer, Figma Design System, Tenkasi Web Developer" />
@@ -15,8 +21,8 @@
   <meta property="og:image" content="assets/deepha-profile.jpg" />
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/main.css?v=2.5" />
-  <link rel="stylesheet" href="css/components.css?v=2.5" />
+  <link rel="stylesheet" href="css/main.css?v=4.4" />
+  <link rel="stylesheet" href="css/components.css?v=5.1" />
 
   <!-- Lucide Icons Script -->
   <script src="https://unpkg.com/lucide@latest"></script>
@@ -50,7 +56,6 @@
         <a href="#services" class="nav-link">Services</a>
         <a href="#works" class="nav-link">Works</a>
         <a href="#calculator" class="nav-link">Cost Estimator</a>
-        <a href="#experience" class="nav-link">Experience</a>
         <a href="#faq" class="nav-link">FAQ</a>
       </nav>
 
@@ -96,7 +101,6 @@
         <a href="#services" class="mobile-nav-link"><span>Services & Pricing</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
         <a href="#works" class="mobile-nav-link"><span>Selected Works</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
         <a href="#calculator" class="mobile-nav-link"><span>Cost Calculator</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
-        <a href="#experience" class="mobile-nav-link"><span>Experience & Skills</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
         <a href="#faq" class="mobile-nav-link"><span>FAQ</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
         <a href="#contact" class="mobile-nav-link"><span>Contact Me</span> <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
       </nav>
@@ -107,8 +111,9 @@
         <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" x2="8" y1="13" y2="13"/><line x1="16" x2="8" y1="17" y2="17"/></svg>
         <span>View Full CV</span>
       </button>
-      <a href="#contact" class="btn btn-accent mobile-nav-link" style="width: 100%; justify-content: center;">
-        <span>Book a Consultation</span>
+      <a href="#contact" class="btn btn-primary mobile-nav-link" style="width: 100%; justify-content: center;">
+        <span>Let's Talk</span>
+        <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
       </a>
     </div>
   </aside>
@@ -118,7 +123,7 @@
        1. Hero Section (Complete Bento Grid Showcase)
        ========================================================================== -->
   <section class="hero-section" id="hero">
-    <div class="watermark-text">UI/UX DESIGN & WEB DEV</div>
+    <div class="watermark-text">UI/UX DESIGN & WEB DEVELOPMENT</div>
     <div class="container">
       <div class="bento-hero-grid">
 
@@ -132,7 +137,7 @@
             </h1>
 
             <p class="hero-clean-desc">
-              Frontend Web Developer & UI/UX Designer crafting clean, high performance websites, custom dashboards, and intuitive digital experiences that help businesses grow.
+              Front End Developer & UI/UX Designer
             </p>
 
             <div class="hero-cta-buttons">
@@ -152,17 +157,34 @@
           </div>
 
           <div class="hero-capability-chips">
-            <span class="capability-chip">React</span>
-            <span class="capability-chip">Next.js</span>
-            <span class="capability-chip">HTML</span>
-            <span class="capability-chip">UI/UX</span>
+            <span class="capability-chip">Business Ready</span>
+            <span class="capability-chip">Easy to Manage</span>
             <span class="capability-chip">Fast & SEO Ready</span>
-            <span class="capability-chip">Mobile Responsive</span>
+            <span class="capability-chip">Mobile Friendly</span>
           </div>
         </div>
 
         <!-- Card 2: Interactive Code & UI Studio Bento Card (Col 5) -->
         <div class="bento-card bento-hero-studio">
+          <div class="studio-footer-row">
+            <div class="profile-location-pill" style="margin-bottom: 0;">
+              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Tenkasi, Tamil Nadu</span>
+            </div>
+
+            <div class="profile-quick-socials">
+              <a href="https://linkedin.com/in/deepha-a-57689725a" target="_blank" rel="noopener noreferrer" class="profile-social-btn" title="LinkedIn Profile" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+              <a href="mailto:deephaarunachalam@gmail.com" class="profile-social-btn" title="Send Email" aria-label="Email">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              </a>
+              <a href="https://wa.me/916369387192" target="_blank" rel="noopener noreferrer" class="profile-social-btn" title="Chat on WhatsApp" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </a>
+            </div>
+          </div>
+
           <div class="studio-window-header">
             <div class="studio-window-controls">
               <span class="studio-dot red"></span>
@@ -181,30 +203,11 @@
 
           <div class="studio-code-container">
             <pre><code><span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
-  <span class="code-property">name</span>: <span class="code-string">"Deepha Arunachalam"</span>,
-  <span class="code-property">focus</span>: <span class="code-string">"Frontend & UI/UX"</span>,
-  <span class="code-property">stack</span>: [<span class="code-string">"React"</span>, <span class="code-string">"Next.js"</span>, <span class="code-string">"Figma"</span>],
+  <span class="code-property">name</span>: <span class="code-string">"Deepha"</span>,
+  <span class="code-property">focus</span>: <span class="code-string">"Frontend Development & UI/UX Designing"</span>,
+  <span class="code-property">stack</span>: [<span class="code-string">"React"</span>, <span class="code-string">"Next.js"</span>, <span class="code-string">"HTML"</span>, <span class="code-string">"Figma"</span>],
   <span class="code-property">craft</span>: <span class="code-string">"Pixel-Perfect & Scalable"</span>
 };</code></pre>
-          </div>
-
-          <div class="studio-footer-row">
-            <div class="profile-location-pill" style="margin-bottom: 0;">
-              <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              <span>Tenkasi, India • Remote</span>
-            </div>
-
-            <div class="profile-quick-socials">
-              <a href="https://linkedin.com/in/deepha-a-57689725a" target="_blank" rel="noopener noreferrer" class="profile-social-btn" title="LinkedIn Profile" aria-label="LinkedIn">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href="mailto:deephaarunachalam@gmail.com" class="profile-social-btn" title="Send Email" aria-label="Email">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              </a>
-              <a href="https://wa.me/916369387192" target="_blank" rel="noopener noreferrer" class="profile-social-btn" title="Chat on WhatsApp" aria-label="WhatsApp">
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              </a>
-            </div>
           </div>
         </div>
 
@@ -255,7 +258,6 @@
         <div class="bento-hero-ticker">
           <div class="ticker-wrapper">
             <div class="ticker-label">
-              <span class="ticker-dot"></span>
               <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
               <span>Tech Stack</span>
             </div>
@@ -301,10 +303,7 @@
           <i data-lucide="layers"></i>
           <span>What I Do Best</span>
         </div>
-        <h2 class="section-title">Freelance Web Engineering & UI/UX Solutions</h2>
-        <p class="section-subtitle">
-          From high-converting landing pages and business websites to full admin dashboards, I deliver clean, mobile-friendly, and modern web solutions.
-        </p>
+        <h2 class="section-title">Web Engineering & UI/UX Solutions</h2>
       </div>
 
       <!-- Dynamic Services Bento Grid -->
@@ -313,14 +312,13 @@
       </div>
 
       <!-- Pricing Packages Bento -->
-      <div style="margin-top: 80px;">
+      <div class="pricing-packages-wrapper">
         <div class="section-header" style="margin-bottom: 32px;">
           <div class="section-tag">
             <i data-lucide="tag"></i>
-            <span>Transparent Rates</span>
+            <span>See What We Offer</span>
           </div>
-          <h3 style="font-size: 2.2rem;">Freelance Service Packages</h3>
-          <p class="section-subtitle">Choose a simple fixed package below or use the interactive calculator to estimate your exact project scope.</p>
+          <h3 class="pricing-section-title">Service Packages</h3>
         </div>
 
         <div class="bento-pricing-grid" id="pricing-grid-container">
@@ -342,19 +340,10 @@
           <i data-lucide="folder-git-2"></i>
           <span>Case Studies</span>
         </div>
-        <h2 class="section-title">Selected Works & Production Projects</h2>
-        <p class="section-subtitle">
-          Explore real-world websites, interactive dashboards, and client projects built with clean design and high performance.
-        </p>
+        <h2 class="section-title">Selected Works</h2>
       </div>
 
-      <!-- Project Category Filters -->
-      <div class="projects-filter-bar">
-        <button class="filter-tab active" data-filter="all">All Projects</button>
-        <button class="filter-tab" data-filter="react">React & Next.js</button>
-        <button class="filter-tab" data-filter="uiux">UI/UX & Figma</button>
-        <button class="filter-tab" data-filter="dashboard">Dashboards & Portals</button>
-      </div>
+
 
       <!-- Dynamic Projects Bento Grid -->
       <div class="bento-projects-grid" id="projects-grid-container">
@@ -375,10 +364,7 @@
           <i data-lucide="calculator"></i>
           <span>Instant Quote Generator</span>
         </div>
-        <h2 class="section-title">Interactive Project Cost Estimator</h2>
-        <p class="section-subtitle">
-          Select your desired project parameters below to get an upfront estimate of investment and delivery timeline.
-        </p>
+        <h2 class="section-title">Project Cost Estimator</h2>
       </div>
 
       <div class="bento-estimator-grid">
@@ -391,9 +377,9 @@
           </div>
 
           <div class="project-type-options">
-            <div class="calc-option-btn estimator-type-btn active" data-name="Single Landing Page" data-price="3500" data-days="3">
+            <div class="calc-option-btn estimator-type-btn active" data-name="Single Landing Page" data-price="4000" data-days="3">
               <div class="calc-option-title">Single Landing Page</div>
-              <div class="calc-option-sub">₹3,500 (Flat) • Full multi-section 1-page site (About, Gallery, Reviews & Booking)</div>
+              <div class="calc-option-sub">₹4,000 (Flat) • Full multi-section 1-page site (About, Gallery, Reviews & Booking)</div>
             </div>
 
             <div class="calc-option-btn estimator-type-btn" data-name="Multi-Page Website (Static)" data-price="2000" data-days="3">
@@ -401,22 +387,24 @@
               <div class="calc-option-sub">₹2,000 / page • Clean company & service pages</div>
             </div>
 
-            <div class="calc-option-btn estimator-type-btn" data-name="Admin Dashboard & Portal" data-price="3000" data-days="4">
+            <div class="calc-option-btn estimator-type-btn" data-name="Admin Dashboard & Portal" data-price="5000" data-days="4">
               <div class="calc-option-title">Admin Dashboard & Portal</div>
-              <div class="calc-option-sub">₹3,000 / page • Business panels, tables & charts</div>
+              <div class="calc-option-sub">₹5,000 / page • Business panels, tables & charts</div>
             </div>
 
-            <div class="calc-option-btn estimator-type-btn" data-name="Web App with Database" data-price="4000" data-days="5">
+            <div class="calc-option-btn estimator-type-btn" data-name="Web App with Database" data-price="6000" data-days="5">
               <div class="calc-option-title">Web App with Database</div>
-              <div class="calc-option-sub">₹4,000 / page • Dynamic web app & user logins</div>
+              <div class="calc-option-sub">₹6,000 / page • Dynamic web app & user logins</div>
             </div>
           </div>
 
-          <!-- 2. Scope & Pages Range Selector -->
+ 
           <div class="scope-selection-wrapper muted" id="scope-selection-wrapper">
-            <div class="calc-section-label">
-              <i data-lucide="layers" style="color: var(--accent-primary); width: 17px; height: 17px;"></i>
-              <span>2. Select Scope / Number of Pages</span>
+            <div class="calc-section-label scope-section-label">
+              <div class="calc-section-title-wrap">
+                <i data-lucide="layers" style="color: var(--accent-primary); width: 17px; height: 17px;"></i>
+                <span>2. Select Scope / Number of Pages</span>
+              </div>
               <span class="scope-muted-badge">Fixed to 1 page</span>
             </div>
 
@@ -452,8 +440,8 @@
                   Complex & Advanced Web Animations (+₹1,000)
                 </span>
                 <p style="font-size: 0.84rem; color: var(--text-secondary); line-height: 1.45; margin: 0;">
-                  Adds rich 3D card tilts, scroll-driven visual effects, particle interactions, and kinetic typography. 
-                  <span style="color: var(--accent-primary); font-weight: 500;">(Standard clean transitions and hover effects are always included free in base pricing).</span>
+                  Adds interactive 3D effects and custom scroll animations for a premium look. 
+                  <span style="color: var(--accent-primary); font-weight: 500;">(Standard smooth animations are always included free).</span>
                 </p>
               </div>
             </label>
@@ -468,7 +456,7 @@
           </div>
 
           <div class="receipt-total-box">
-            <div class="receipt-total-amount" id="estimator-price-val">₹3,500</div>
+            <div class="receipt-total-amount" id="estimator-price-val">₹4,000</div>
             <span class="receipt-total-sub">Estimated Amount</span>
           </div>
 
@@ -513,16 +501,13 @@
           <i data-lucide="briefcase"></i>
           <span>Track Record</span>
         </div>
-        <h2 class="section-title">Career Experience & Academic Credentials</h2>
-        <p class="section-subtitle">
-          Proven industry experience delivering UI/UX design and frontend implementations across international remote teams.
-        </p>
+        <h2 class="section-title">Career Experience & Academics</h2>
       </div>
 
       <div class="bento-career-grid">
         <!-- Card 1: Experience Timeline Bento Card (Col 7) -->
         <div class="bento-timeline-card">
-          <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 18px; display: flex; align-items: center; gap: 8px;">
+          <h3 class="career-card-title">
             <i data-lucide="briefcase" style="color: var(--accent-primary);"></i> Work Experience
           </h3>
           <div id="timeline-container">
@@ -533,7 +518,7 @@
         <!-- Card 2: Education & Certifications Bento Card (Col 5) -->
         <div class="bento-education-card">
           <div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+            <h3 class="career-card-title">
               <i data-lucide="graduation-cap" style="color: var(--accent-primary);"></i> Academic Track
             </h3>
             <div id="education-cards-container">
@@ -542,33 +527,12 @@
           </div>
 
           <div>
-            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+            <h3 class="career-card-title">
               <i data-lucide="award" style="color: var(--accent-primary);"></i> Certifications
             </h3>
             <div id="certifications-container">
               <!-- Rendered by main.js -->
             </div>
-          </div>
-        </div>
-
-        <!-- Card 3: Technical Skills Mastery Bento Card (Col 12) -->
-        <div class="bento-skills-card">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 14px; margin-bottom: 20px;">
-            <div>
-              <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 4px;">Technical Proficiency</h3>
-              <p style="font-size: 0.9rem; color: var(--text-secondary);">Demonstrated mastery across frontend engineering, UI design, and tooling.</p>
-            </div>
-
-            <div class="skills-category-tabs" style="margin-bottom: 0;">
-              <button class="skill-tab-btn active" data-skill-cat="all">All Skills</button>
-              <button class="skill-tab-btn" data-skill-cat="frontend">Frontend & React</button>
-              <button class="skill-tab-btn" data-skill-cat="design">UI/UX & Figma</button>
-              <button class="skill-tab-btn" data-skill-cat="tools">Dev Tools</button>
-            </div>
-          </div>
-
-          <div class="skills-progress-list" id="skills-progress-container">
-            <!-- Rendered by main.js -->
           </div>
         </div>
       </div>
@@ -587,10 +551,7 @@
           <i data-lucide="message-square"></i>
           <span>Client Endorsements</span>
         </div>
-        <h2 class="section-title">What Founders & Engineering Leaders Say</h2>
-        <p class="section-subtitle">
-          Real feedback from founders, product leads, and engineering managers who collaborated with Deepha.
-        </p>
+        <h2 class="section-title">What Our Client Says</h2>
       </div>
 
       <div class="bento-testimonials-grid" id="testimonials-grid-container">
@@ -612,9 +573,6 @@
           <span>Common Inquiries</span>
         </div>
         <h2 class="section-title">Frequently Asked Questions</h2>
-        <p class="section-subtitle">
-          Clear answers about freelance workflows, technology stacks, pricing, and project turnaround times.
-        </p>
       </div>
 
       <div class="bento-faq-grid" id="faq-accordion-container" style="max-width: 900px; margin: 0 auto;">
@@ -635,10 +593,7 @@
           <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           <span>Let's Connect</span>
         </div>
-        <h2 class="section-title">Ready to Build Your Next Web Project?</h2>
-        <p class="section-subtitle">
-          Have an upcoming project, a Figma design ready for React coding, or need a full web overhaul? Let’s make it happen.
-        </p>
+        <h2 class="section-title">Ready to Build Your Project?</h2>
       </div>
 
       <div class="bento-contact-grid">
@@ -690,7 +645,7 @@
             </div>
           </div>
 
-          <div style="padding-top: 20px; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
+          <div class="contact-social-row" style="padding-top: 20px; border-top: 1px solid var(--border-subtle); display: flex; align-items: center; justify-content: space-between;">
             <span style="font-size: 0.86rem; color: var(--text-secondary);">Connect on Social:</span>
             <div style="display: flex; gap: 8px;">
               <a href="https://linkedin.com/in/deepha-a-57689725a" target="_blank" rel="noopener noreferrer" class="profile-social-btn" title="LinkedIn" aria-label="LinkedIn">
@@ -726,10 +681,10 @@
               <label class="form-label" for="contact-service">Service Required</label>
               <select id="contact-service" class="form-input">
                 <option value="Custom Website Development">Custom Website Development (Landing Page / Business Site)</option>
-                <option value="Figma Design to Live Website">Figma Design to Live Website</option>
-                <option value="UI/UX & Clickable Prototypes">UI/UX Design & Clickable Prototype</option>
                 <option value="Admin Dashboards & Portals">Admin Dashboard & Business Portal</option>
                 <option value="Website Redesign & Speed Boost">Website Redesign & Speed Boost</option>
+                <option value="Figma Design to Live Website">Figma Design to Live Website</option>
+                <option value="UI/UX Designing">UI/UX Designing</option>
                 <option value="General Consultation">General Consultation / Other Inquiry</option>
               </select>
             </div>
@@ -737,7 +692,7 @@
             <div class="form-group">
               <label class="form-label" for="contact-budget">Estimated Budget Range</label>
               <select id="contact-budget" class="form-input">
-                <option value="₹3,500 - ₹10,000">₹3,500 – ₹10,000 (Single Page / Small Website)</option>
+                <option value="₹4,000 - ₹10,000">₹4,000 – ₹10,000 (Single Page / Small Website)</option>
                 <option value="₹10,000 - ₹25,000" selected>₹10,000 – ₹25,000 (Multi-Page / Dashboard)</option>
                 <option value="₹25,000+">₹25,000+ (Full Web App / Large Project)</option>
               </select>
@@ -794,7 +749,6 @@
               <a href="#services" class="footer-link">Freelance Services</a>
               <a href="#works" class="footer-link">Selected Works</a>
               <a href="#calculator" class="footer-link">Cost Estimator</a>
-              <a href="#experience" class="footer-link">Career Track</a>
             </div>
           </div>
 
@@ -835,11 +789,7 @@
   </footer>
 
 
-  <!-- ==========================================================================
-       10. Interactive Modals
-       ========================================================================== -->
-
-  <!-- 1. Case Study Deep Dive Modal -->
+ 
   <div class="modal-backdrop" id="case-study-modal" aria-hidden="true" role="dialog">
     <div class="modal-container">
       <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Case Study">
@@ -885,9 +835,9 @@
           <h4 class="resume-section-title">Experience Track</h4>
           <div style="display: flex; flex-direction: column; gap: 14px;">
             <div>
-              <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary);">
+              <div class="resume-item-header" style="display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; color: var(--text-primary);">
                 <span>Maesterominds — UI/UX & Frontend Developer</span>
-                <span style="color: var(--accent-primary);">Sep 2025 – Present</span>
+                <span style="color: var(--accent-primary); font-size: 0.82rem; font-weight: 500; white-space: nowrap;">Sep 2025 – Present</span>
               </div>
               <div style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 2px;">
                 Engineered frontend modules for Batter, EduNova, Vevetrack & MentorConnect in Next.js & Figma.
@@ -895,9 +845,9 @@
             </div>
 
             <div>
-              <div style="display: flex; justify-content: space-between; font-weight: 700; color: var(--text-primary);">
+              <div class="resume-item-header" style="display: flex; justify-content: space-between; align-items: baseline; font-weight: 700; color: var(--text-primary);">
                 <span>Arshan (Berlin, Germany) — UI/UX Designer & Web Consultant</span>
-                <span style="color: var(--accent-primary);">Aug 2025 – Sep 2025</span>
+                <span style="color: var(--accent-primary); font-size: 0.82rem; font-weight: 500; white-space: nowrap;">Aug 2025 – Sep 2025</span>
               </div>
               <div style="font-size: 0.88rem; color: var(--text-secondary); margin-top: 2px;">
                 Designed comprehensive admin workflows, seat-booking interfaces, and interactive prototypes.
@@ -908,7 +858,7 @@
 
         <div>
           <h4 class="resume-section-title">Education & Credentials</h4>
-          <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.92rem; color: var(--text-primary);">
+          <div class="resume-item-header" style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.92rem; color: var(--text-primary);">
             <span>B.E. Computer Science & Engineering (Francis Xavier Engineering College)</span>
             <span style="color: var(--accent-primary);">CGPA: 8.58 / 10</span>
           </div>
@@ -922,6 +872,6 @@
 
   <!-- Scripts -->
   <script src="js/data.js?v=2.4"></script>
-  <script src="js/main.js?v=2.4"></script>
+  <script src="js/main.js?v=3.6"></script>
 </body>
 </html>
