@@ -235,9 +235,9 @@ const portfolioData = {
 
   testimonials: [
     {
-      name: "Marcus Vance",
+      name: "Damon",
       role: "Product Lead",
-      avatarText: "MV",
+      avatarText: "DM",
       rating: 5,
       quote: "Deepha is an outstanding professional. She translated our complex seat booking and dashboard workflows into an astonishingly clean, intuitive interface. Her grasp of both Figma design systems and frontend feasibility is unmatched."
     },
@@ -245,13 +245,13 @@ const portfolioData = {
       name: "Karthik Subramanian",
       role: "Engineering Manager",
       avatarText: "KS",
-      rating: 5,
+      rating: 4,
       quote: "Deepha delivered UI/UX solutions across 4 distinct SaaS products with surgical precision. She writes clean, accessible React code that plugs seamlessly into our stack. 10/10 recommend for any serious web development project!"
     },
     {
-      name: "Elena Rostova",
+      name: "Prem Kumar",
       role: "Founder & CEO",
-      avatarText: "ER",
+      avatarText: "PK",
       rating: 5,
       quote: "Working with Deepha felt effortless. She took a messy multi-vendor concept and turned it into an elegant, high-converting luxury web platform. Our users love the interactive budget tracker and smooth responsiveness."
     }
