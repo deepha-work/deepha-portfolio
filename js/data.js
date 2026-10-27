@@ -104,6 +104,32 @@ const portfolioData = {
 
   projects: [
     {
+      id: "homemaded",
+      title: "HomeMaded",
+      category: "website",
+      categoryLabel: "Cloud Kitchen & FoodTech",
+      tagline: "High-performance direct ordering web platform & interactive meal box builder",
+      image: "assets/homemaded.png",
+      featured: true,
+      technologies: ["HTML5", "CSS3", "JavaScript"],
+      overview: "A custom web application and direct-to-consumer food ordering platform designed and developed for HomeMaded. Features an interactive Meal Box cart builder, real-time client-side bill calculation, instant promo code validation, and a zero-reload pincode delivery radius verification tool.",
+      challenge: "Building a high-converting direct ordering experience that eliminates third-party aggregator commissions, maintains sub-second load times on mobile networks, and provides frictionless one-thumb checkout.",
+      solution: "Architected a lightweight vanilla JavaScript frontend with responsive state-driven cart drawers, client-side pincode validation algorithms, appetite-focused typography, and 100% mobile-first ergonomic navigation.",
+      metrics: [
+        { label: "Core Web Vitals", value: "99/100" },
+        { label: "Page Load Speed", value: "< 0.8s" },
+        { label: "Order Conversion", value: "+54%" }
+      ],
+      features: [
+        "Reactive Meal Box Cart with live item counters, subtotal computation, and coupon engine",
+        "Instant Pincode Verification algorithm checking delivery radius without page reloads",
+        "Dynamic Kitchen Status Badge with live operational indicators and order dispatch trackers",
+        "Mobile-first responsive drawer and bottom action ergonomics tailored for fast mobile ordering",
+        "Optimized asset loading and dependency-free architecture achieving 99+ Lighthouse performance"
+      ],
+      liveUrl: "https://homemaded.vercel.app/"
+    },
+    {
       id: "peppernclove",
       title: "Pepper & Clove Enclave",
       category: "website",
@@ -130,6 +156,7 @@ const portfolioData = {
       liveUrl: "https://peppernclove.vercel.app/"
     }
   ],
+
 
   experience: [
     {
