@@ -160,8 +160,8 @@ const portfolioData = {
 
   experience: [
     {
-      company: "Maesterominds",
-      role: "UI/UX & Frontend Developer",
+      company: "Maestrominds",
+      role: "Software Engineer",
       location: "Chennai, India (Remote)",
       period: "Sep 2025 – Present",
       type: "Remote Work",
