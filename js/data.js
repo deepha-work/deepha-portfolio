@@ -104,6 +104,110 @@ const portfolioData = {
 
   projects: [
     {
+      id: "kumarglobal",
+      title: "Kumar Global",
+      category: "website",
+      categoryLabel: "Industrial & Global Trade",
+      tagline: "Reliable industrial scrap procurement, global sourcing & logistics platform",
+      image: "assets/kumarglobal.png",
+      featured: true,
+      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive UI"],
+      overview: "A comprehensive corporate web platform designed and engineered for Kumar Global, providing dependable industrial scrap procurement solutions, global sourcing, and verified supplier alignments across international supply chains.",
+      challenge: "Creating a high-trust B2B digital identity that clearly communicates industrial scrap procurement tiers, international quality standards, and provides seamless multi-channel quote request workflows.",
+      solution: "Engineered a high-performance modern web experience featuring streamlined procurement inquiry funnels, responsive global logistics showcases, and mobile-optimized communication channels.",
+      metrics: [
+        { label: "Inquiry Velocity", value: "+45%" },
+        { label: "Core Web Vitals", value: "98/100" },
+        { label: "Global Reach", value: "Multi-Region" }
+      ],
+      features: [
+        "Industrial scrap sourcing catalog and material grade classification specifications",
+        "Streamlined B2B quote request and international supplier alignment funnels",
+        "Global supply chain & logistics capabilities showcase with interactive touchpoints",
+        "High-conversion mobile-first responsive architecture ensuring fast navigation",
+        "Optimized asset delivery and dependency-free frontend with sub-second page loads"
+      ],
+      liveUrl: "https://www.kumarglobal.in/"
+    },
+    {
+      id: "skincarebykumar",
+      title: "Skincare By Kumar",
+      category: "website",
+      categoryLabel: "E-Commerce & Wellness",
+      tagline: "Pure ingredients, cold-processed artisanal soaps & curated skincare essentials",
+      image: "assets/skincarebykumar.png",
+      featured: true,
+      technologies: ["Next.js", "React", "Tailwind CSS", "UI/UX Design"],
+      overview: "A boutique direct-to-consumer e-commerce showcase designed and built for Skincare By Kumar, celebrating handcrafted cold-processed artisanal soaps and premium natural botanical wellness formulations.",
+      challenge: "Showcasing artisanal handcrafted soap aesthetics with premium organic branding, transparent ingredient storytelling, and smooth direct shopping funnels.",
+      solution: "Architected an editorial, minimalist aesthetic featuring natural earthy textures, high-clarity ingredient breakdowns, responsive product galleries, and rapid checkout accessibility.",
+      metrics: [
+        { label: "Mobile Engagement", value: "+62%" },
+        { label: "Conversion Rate", value: "+38%" },
+        { label: "Core Web Vitals", value: "99/100" }
+      ],
+      features: [
+        "Cold-processed artisanal soap product showcase with ingredient spotlights",
+        "Botanical formulation benefits and skin compatibility guides",
+        "Seamless WhatsApp & direct cart ordering integration",
+        "Responsive touch-optimized product galleries with high-resolution media",
+        "Next.js server-rendered architecture with ultra-fast page transitions"
+      ],
+      liveUrl: "https://www.skincarebykumar.in/"
+    },
+    {
+      id: "petcrossofindia",
+      title: "Pet Cross of India",
+      category: "website",
+      categoryLabel: "Veterinary Healthcare & NGO",
+      tagline: "Compassionate veterinary care, emergency animal rescue & rabies prevention in Tirunelveli",
+      image: "assets/petcrossofindia.jpg",
+      featured: true,
+      technologies: ["HTML5", "CSS3", "JavaScript", "Responsive UI"],
+      overview: "A dedicated healthcare and rescue portal developed for Pet Cross of India in Tirunelveli, Tamil Nadu. Bridges compassionate community animal rescue, emergency treatment dispatch, vaccination drives, and pet adoption awareness.",
+      challenge: "Developing an emergency-ready mobile interface that enables citizens to rapidly report injured animals, locate surgical care facilities, and support community stray feeding initiatives.",
+      solution: "Built an accessible, high-contrast humanitarian web platform with 1-tap SOS rescue calling, adoption gallery showcases, sterilization tracking stats, and donation channels.",
+      metrics: [
+        { label: "SOS Response Time", value: "< 2 mins" },
+        { label: "Community Inquiries", value: "+75%" },
+        { label: "Mobile Usability", value: "100%" }
+      ],
+      features: [
+        "Emergency SOS rescue hotline integration with 1-click calling",
+        "Veterinary care services directory covering surgery, OPD & rabies vaccination",
+        "Animal rescue success stories and community stray welfare gallery",
+        "Community donation, feeding sponsorship, and volunteer registration funnels",
+        "Lightweight, fast-loading architecture accessible on low-bandwidth mobile networks"
+      ],
+      liveUrl: "https://www.petcrossofindia.com/"
+    },
+    {
+      id: "musictutorship",
+      title: "Music Tutorship",
+      category: "website",
+      categoryLabel: "EdTech & Music Production",
+      tagline: "Premium music production academy, personalized courses & artist mentorship",
+      image: "assets/musictutorship.webp",
+      featured: true,
+      technologies: ["Next.js", "React", "TypeScript", "Modern CSS"],
+      overview: "A premier music education web platform built for Music Tutorship, offering structured electronic music production courses, audio engineering masterclasses, student showcases, and 1-on-1 mentor booking.",
+      challenge: "Creating a sleek, dark-mode audio studio aesthetic that engages aspiring producers while presenting course curricula, syllabus previews, and coaching consultations clearly.",
+      solution: "Developed an immersive studio-inspired Next.js frontend with course tier breakdowns, interactive curriculum accordions, mentor credibility spotlights, and seamless booking funnels.",
+      metrics: [
+        { label: "Course Enrollment", value: "+50%" },
+        { label: "Session Booking", value: "+65%" },
+        { label: "Lighthouse Performance", value: "98/100" }
+      ],
+      features: [
+        "Music production curriculum showcase covering DAW workflows, mixing & mastering",
+        "Interactive mentor booking and 1-on-1 consultation scheduling",
+        "Audio production blog insights, student testimonials, and alumni tracks",
+        "Sleek dark-mode studio interface with high-contrast audio-first typography",
+        "Next.js optimized routing with instant page loads and zero layout shift"
+      ],
+      liveUrl: "https://www.musictutorship.in/"
+    },
+    {
       id: "homemaded",
       title: "HomeMaded",
       category: "website",
