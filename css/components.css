@@ -45,11 +45,6 @@
   color: var(--text-primary);
   white-space: nowrap;
   text-decoration: none;
-  transition: transform var(--transition-fast);
-}
-
-.brand-logo:hover {
-  transform: scale(1.03);
 }
 
 .brand-logo .logo-mark {
@@ -70,14 +65,15 @@
 }
 
 .brand-logo .brand-logo-img {
-  width: 36px;
   height: 36px;
-  object-fit: cover;
-  object-position: center;
-  border-radius: var(--radius-sm);
-  box-shadow: 0 2px 8px rgba(109, 40, 217, 0.25);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  width: auto;
+  max-width: 48px;
+  object-fit: contain;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  filter: none;
   flex-shrink: 0;
   display: block;
 }
@@ -86,17 +82,6 @@
 .brand-logo > span:not(.logo-mark):not(.brand-logo-img) {
   font-family: var(--font-logo);
   font-weight: 700;
-}
-
-.brand-logo:hover .logo-mark {
-  background: var(--accent-primary);
-  color: #FFFFFF;
-  transform: rotate(-8deg) scale(1.05);
-}
-
-.brand-logo:hover .brand-logo-img {
-  transform: rotate(-6deg) scale(1.08);
-  box-shadow: 0 4px 16px rgba(109, 40, 217, 0.45);
 }
 
 .brand-logo .logo-dot {
