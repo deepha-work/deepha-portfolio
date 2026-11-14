@@ -187,7 +187,7 @@ const portfolioData = {
       category: "website",
       categoryLabel: "EdTech & Music Production",
       tagline: "Premium music production academy, personalized courses & artist mentorship",
-      image: "assets/musictutorship.webp",
+      image: "assets/musictutorship.png",
       featured: true,
       technologies: ["Next.js", "React", "TypeScript", "Modern CSS"],
       overview: "A premier music education web platform built for Music Tutorship, offering structured electronic music production courses, audio engineering masterclasses, student showcases, and 1-on-1 mentor booking.",
