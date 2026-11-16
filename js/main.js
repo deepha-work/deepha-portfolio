@@ -1,6 +1,4 @@
-/* ==========================================================================
-   DEEPHA A. - BENTO GRID DESIGN SYSTEM INTERACTION LOGIC
-   ========================================================================== */
+
 
 document.addEventListener("DOMContentLoaded", () => {
   // Initialize Lucide Icons
