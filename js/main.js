@@ -516,7 +516,7 @@ function initCostEstimator() {
   const specScopeDisplay = document.getElementById("spec-scope-val");
   const specAddonsDisplay = document.getElementById("spec-addons-val");
 
-  let selectedType = { name: "Single Landing Page", basePrice: 4000, baseDays: 3 };
+  let selectedType = { name: "Single Landing Page", basePrice: 5000, baseDays: 3 };
   let selectedScope = { name: "1 Page (Landing Page)", multiplier: 1, daysAdd: 0 };
   let selectedAddons = [];
   let lastScopeChoice = { name: "3 – 5 Pages Scope", multiplier: 4, daysAdd: 2 };
@@ -592,7 +592,7 @@ function initCostEstimator() {
     });
   });
 
-  let lastEstimatedPrice = 4000;
+  let lastEstimatedPrice = 5000;
 
   function animatePriceCount(from, to) {
     if (!priceDisplay) return;
